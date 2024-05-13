@@ -33,6 +33,9 @@
     display: flex;
     gap: 20px;
     padding: 0;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .navHeader ul li{
@@ -71,19 +74,23 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 800px;
+    max-width: 800px;
 }
 
 video{
     height: auto;
     width: 100%;
+}
+
+img{
+    height: auto;
+    width:100%;
 }
 
 .titleSection figure figcaption{
@@ -105,4 +112,110 @@ video{
     line-height: 24px;
 }
 
+@media screen and (max-width: 4000px){
+    .divLeft i{
+        display: none;
+    }
+    .divLeft span{
+        padding-left: 30px;;
+    }
+}
 
+@media screen and (max-width: 860px) {
+    h1 {
+        font-size: 20px;
+        padding-top: 30px; 
+    }
+
+    main, footer div {
+        padding: 0px 10px; 
+    }
+
+    section {
+        padding: 10px; 
+    }
+
+    .splitContent {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .splitContent article, .splitContent aside {
+        width: auto; 
+    }
+
+    .firstParagraphSection article p, .splitContent article p, footer div p {
+        font-size: 14px; 
+    }
+
+    aside h4, .titleSection figure figcaption {
+        font-size: smaller; 
+    }
+
+    .firstParagraphSection figure img, aside ul li figure img {
+        width: 100%; 
+        height: auto; 
+        padding: 5px;
+    }
+
+    aside ul li figure {
+        align-items: center;
+    }
+
+    aside ul li figure img {
+        max-width: 100px; 
+        height: auto; 
+    }
+
+    aside ul li figure figcaption span {
+        font-size: 12px; 
+    }
+
+    footer {
+        padding: 20px 10px;
+        text-align: left;
+    }
+
+    footer div {
+        width: 100%; 
+        display: flex; 
+        justify-content: center; 
+    }
+
+    footer div p {
+        font-size: 14px; 
+        margin-top: 10px; 
+    }
+}
+
+@media screen and (max-width: 795px){
+    .divLeft i{
+        display: none;
+    }
+    .divLeft span{
+        padding-left: 15px;
+    }
+    .navHeader{
+        border: 1px solid gray;
+        font-family: 'Calibri', Times;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .divLeft i{
+        display: block;
+    }
+    .divRightFirst ul {
+        display: none;
+    }
+    .divLeft span{
+        padding-left: 0px;
+    }   
+    .navHeaderA{
+        display: none;
+    }
+    .navHeaderMore{
+        display: block;
+    } 
+}
