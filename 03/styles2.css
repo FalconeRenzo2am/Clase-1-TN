@@ -1,0 +1,104 @@
+.divHeader{
+    display: flex;
+    background-color: aquamarine;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.divHeader i{
+    margin-left: 5px;
+    color: white;
+}
+
+.divHeader i:hover{
+    color:black
+}
+
+.divHeader span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: black;
+}
+
+.navHeader{
+    background-color:greenyellow;
+    border: 2px black;
+}
+
+.navHeader ul{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+    margin: 0;
+}
+
+.navHeader ul li{
+    list-style: none;
+}
+
+.navHeader ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navHeader a:hover{
+    color: gray;
+}
+
+main{
+    width: 100%;
+    padding: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+img{
+    height: auto;
+    width:100%;
+}
+
+.titleSection{
+    width: 100%;
+    padding: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.titleSection figure figcaption{
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+    font-size: smaller;
+}
+
+.titleSection figure figcaption span p{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5px;
+}
+
+.firstParagraphSection article p{
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 24px;
+}
+
+.divFooterRight i{
+    margin: 5px;
+}
+
+
