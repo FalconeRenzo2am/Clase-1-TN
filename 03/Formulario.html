@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <script>
+        function validateForm() {
+            let nombreCompleto = document.getElementById("nombreCompleto").value;
+            let email = document.getElementById("email").value;
+            let contrasena = document.getElementById("contrasena").value;
+            let edad = document.getElementById("edad").value;
+            let telefono = document.getElementById("telefono").value;
+            let direccion = document.getElementById("direccion").value;
+            let ciudad = document.getElementById("ciudad").value;
+            let codigoPostal = document.getElementById("codigoPostal").value;
+            let dni = document.getElementById("dni").value;
+
+            // Validación Nombre Completo
+            if (!/^[A-Za-zÀ-ÖØ-öø-ÿ]{3,}\s[A-Za-zÀ-ÖØ-öø-ÿ]{3,}$/.test(nombreCompleto)) {
+                alert("El nombre completo debe tener más de 6 letras y al menos un espacio entre medio.");
+                return false;
+            }
+
+            // Validación Email
+            if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+                alert("Por favor, introduce un correo electrónico válido.");
+                return false;
+            }
+
+            // Validación Contraseña
+            if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(contrasena)) {
+                alert("La contraseña debe tener al menos 8 caracteres, formados por letras y números.");
+                return false;
+            }
+
+            // Validación Edad
+            if (!/^\d+$/.test(edad) || edad < 18) {
+                alert("La edad debe ser un número entero mayor o igual a 18.");
+                return false;
+            }
+
+            // Validación Teléfono
+            if (!/^\d{7,}$/.test(telefono)) {
+                alert("El teléfono debe ser un número de al menos 7 dígitos sin espacios, guiones ni paréntesis.");
+                return false;
+            }
+
+            // Validación Dirección
+            if (!/^.{1,}\s.{1,}$/.test(direccion) || direccion.length < 5) {
+                alert("La dirección debe tener al menos 5 caracteres, con letras, números y un espacio en el medio.");
+                return false;
+            }
+
+            // Validación Ciudad
+            if (ciudad.length < 3) {
+                alert("La ciudad debe tener al menos 3 caracteres.");
+                return false;
+            }
+
+            // Validación Código Postal
+            if (codigoPostal.length < 3) {
+                alert("El código postal debe tener al menos 3 caracteres.");
+                return false;
+            }
+
+            // Validación DNI
+            if (!/^\d{7,8}$/.test(dni)) {
+                alert("El DNI debe ser un número de 7 u 8 dígitos.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <form onsubmit="return validateForm()">
+        <label for="nombreCompleto">Nombre Completo:</label><br>
+        <input type="text" id="nombreCompleto" name="nombreCompleto" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="contrasena">Contraseña:</label><br>
+        <input type="password" id="contrasena" name="contrasena" required><br><br>
+
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" min="18" required><br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="text" id="telefono" name="telefono" required><br><br>
+
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+
+        <label for="ciudad">Ciudad:</label><br>
+        <input type="text" id="ciudad" name="ciudad" required><br><br>
+
+        <label for="codigoPostal">Código Postal:</label><br>
+        <input type="text" id="codigoPostal" name="codigoPostal" required><br><br>
+
+        <label for="dni">DNI:</label><br>
+        <input type="text" id="dni" name="dni" required><br><br>
+
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>
